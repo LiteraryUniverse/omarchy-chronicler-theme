@@ -1,0 +1,55 @@
+/* Chronicler — Wofi launcher
+ * Art Nouveau: deep forest parchment, copper borders, carmine selection
+ */
+
+@define-color bg      #1E1A0E;
+@define-color fg      #F0E6C0;
+@define-color gray1   #A12577;
+@define-color gray2   #3A3218;
+@define-color gray3   #C9A84C;
+@define-color gray4   #2A2410;
+@define-color gray5   #4A7C59;
+@define-color fg_bright #F0E6C0;
+
+window {
+    background-color: @bg;
+    border: 2px solid @gray3;
+    border-radius: 10px;
+}
+
+input {
+    background-color: @bg;
+    color: @fg;
+    border: 1px solid @gray2;
+    border-radius: 6px;
+}
+
+input:selected {
+    background-color: @gray1;
+    color: @bg;
+}
+
+#entry {
+    color: @fg;
+    background-color: @bg;
+    padding: 6px;
+    margin: 2px;
+}
+
+#entry:selected {
+    background-color: @gray1;
+    color: @bg;
+}
+
+scrollbar {
+    background-color: @bg;
+}
+
+scrollbar slider {
+    background-color: @gray2;
+    border-radius: 6px;
+}
+
+scrollbar slider:hover {
+    background-color: @gray3;
+}

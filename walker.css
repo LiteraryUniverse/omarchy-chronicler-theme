@@ -1,0 +1,95 @@
+/* Chronicler — Walker launcher
+ * Art Nouveau: deep forest parchment, copper border, carmine selection
+ */
+
+@define-color selected-text #F0E6C0;
+@define-color text          #F0E6C0;
+@define-color base          #1E1A0E;
+@define-color border        #C9A84C;
+@define-color foreground    #F0E6C0;
+@define-color background    #1E1A0E;
+@define-color hover         #A12577;
+@define-color selected-box  #A12577cc;
+
+/* Search — organic vine-framed input */
+window .search-container,
+window .search {
+    background: alpha(@hover, 0.08);
+    color: @foreground;
+    /* Asymmetric border: stronger bottom, like a manuscript ruled line */
+    border-top: 1px solid alpha(@border, 0.3);
+    border-left: 1px solid alpha(@border, 0.3);
+    border-right: 1px solid alpha(@border, 0.3);
+    border-bottom: 2px solid alpha(@border, 0.6);
+    border-radius: 10px 10px 6px 6px;
+    padding: 4px 10px;
+    margin-top: 2px;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+/* Main container — Art Nouveau botanical frame */
+.box-wrapper {
+    border-radius: 14px;
+    background: @background;
+    border: 1px solid alpha(@border, 0.7);
+    /* Botanical gradient: amber-gold top rail fading to transparent — like
+     * the gilded header of an illuminated manuscript page */
+    background-image:
+        linear-gradient(to bottom,
+            alpha(@border, 0.18) 0px,
+            alpha(@border, 0.06) 3px,
+            transparent 18px),
+        linear-gradient(to right,
+            alpha(@hover, 0.08) 0px,
+            transparent 40px,
+            transparent calc(100% - 40px),
+            alpha(@hover, 0.08) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 100% 100%;
+}
+
+/* Item base */
+child {
+    border-radius: 8px;
+    padding: 6px 10px;
+    transition: background-color 0.18s ease-out,
+                margin 0.18s ease-out;
+}
+
+/* Hover */
+child:hover {
+    background-color: alpha(@hover, 0.15);
+}
+
+/* Selected item — vine accent on left edge */
+child:selected {
+    background-color: alpha(@selected-box, 0.85);
+    /* Botanical left-edge vine: gradient stripe like a manuscript margin ornament */
+    background-image: linear-gradient(to right,
+        alpha(@border, 0.9) 0px,
+        alpha(@border, 0.4) 2px,
+        alpha(@border, 0.1) 6px,
+        transparent 14px);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: background-color 0.22s ease-out;
+}
+
+child:selected .item-box {
+    margin-left: 8px;
+    transition: margin 0.22s ease-out;
+}
+
+child:selected .item-box * {
+    color: @selected-text;
+}
+
+window .preview {
+    border: 1px solid alpha(@border, 0.3);
+    border-radius: 8px;
+    background: alpha(@base, 0.8);
+    color: @text;
+    padding: 10px;
+    margin: 8px 0px;
+}

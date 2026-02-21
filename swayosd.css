@@ -1,0 +1,29 @@
+/* Chronicler — SwayOSD
+ * Art Nouveau: deep forest parchment, copper border, carmine progress
+ */
+
+@define-color background-color #3A3020;
+@define-color border-color     #B87333;
+@define-color label            #E8DFC8;
+@define-color image            #C8B898;
+@define-color progress         #A12577;
+
+window:not(:backdrop),
+window:backdrop {
+    border: none;
+    border-width: 0;
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 12px;
+}
+
+window:not(:backdrop) #container,
+window:backdrop #container {
+    border: 2px solid @border-color;
+    border-radius: 10px;
+    background-color: @background-color;
+    padding: 12px;
+    background-clip: padding-box;
+    box-shadow: 2px 4px 16px 0px rgba(0, 0, 0, 0.6);
+}

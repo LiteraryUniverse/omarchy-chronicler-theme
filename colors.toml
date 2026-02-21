@@ -1,0 +1,26 @@
+# Chronicler — colors.toml
+# Art Nouveau: aged vellum, iron gall ink, amber gold, forest green, carmine
+
+accent              = "#C9A84C"
+cursor              = "#A12577"
+foreground          = "#F0E6C0"
+background          = "#1E1A0E"
+selection_foreground = "#1E1A0E"
+selection_background = "#A12577"
+
+color0  = "#1E1A0E"
+color1  = "#C0503A"
+color2  = "#4A7C59"
+color3  = "#C9A84C"
+color4  = "#4A6E8A"
+color5  = "#A12577"
+color6  = "#7A6040"
+color7  = "#D4C898"
+color8  = "#3A3218"
+color9  = "#D4604A"
+color10 = "#5A9A6E"
+color11 = "#E0B85A"
+color12 = "#5A8AAA"
+color13 = "#C03A8A"
+color14 = "#9A8050"
+color15 = "#F0E6C0"
