@@ -1,15 +1,2 @@
-/* Chronicler — Waybar
- * Art Nouveau: deep forest parchment bar, copper accent, warm text
- */
-
-@define-color background #1E1A0E;
 @define-color foreground #F0E6C0;
-@define-color black      #0E0C06;
-@define-color red        #C0503A;
-@define-color green      #4A7C59;
-@define-color yellow     #C9A84C;
-@define-color blue       #4A6E8A;
-@define-color magenta    #A12577;
-@define-color cyan       #7A6040;
-@define-color white      #F0E6C0;
-@define-color bright-black #3A3218;
+@define-color background #1E1A0E;
